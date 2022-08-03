@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/content.css">
+    <script src="JS/responsivity.js" defer></script>
     <title>Mumu's Hill</title>
 </head>
-<body>
+<body onresize="autoWidth()">
 
     <!--Header-->
     <header>
@@ -30,16 +32,18 @@
 
         <div class="sec-full">
             <div class="sec-side">
-                <img class="video-bg" src="images/body/demo/bg-video.png" alt="">
-                <img class="video-bg" id="video-mask" src="images/body/demo/mask-video.png" alt="">
-                <!--Teaser-->
-                <iframe class="video abs-center" src="https://www.youtube.com/embed/2KSFwklvzho?controls=0" title="Teaser Mumu's Hill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="abs-center">
+                    <!--Teaser-->
+                    <iframe class="video abs-center" src="https://www.youtube.com/embed/2KSFwklvzho?controls=0" title="Teaser Mumu's Hill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
     
             <div class="sec-side">
                 <div class="abs-center">
                     <h2>Vamos jogar?</h2>
-                    <p>Você pode relaxar enquanto gerencia um morro em miniatura ou chamar seus amigos para desafiar gatos, traças e outros bichanos.</p>
+                    <p>Você pode relaxar enquanto gerencia um morro em miniatura ou chamar seus amigos para desafiar gatos, traças e outros bichanos.
+                    <a href="#info"> Jogar </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -67,7 +71,7 @@
                 <div class="abs-center">
                     <h2>Sobreviva</h2>
                     <img src="images/body/demo/equipes.png" alt="">
-                    <p>Desafie os bichanos e terá de erguer torres defensivas enquanto luta pela sua vida.</p>
+                    <p>Construa torres defensivas enquanto luta pela sua vida no modo sobrevivência.</p>
                 </div>
             </div>
         </div>
