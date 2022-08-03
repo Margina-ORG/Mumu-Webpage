@@ -1,7 +1,13 @@
 @charset "UTF-8";
 :root{
+    --sec-side-minW: 300px;
     --sec-side-minH: 400px;
     --sec-side-w: 49%;
+
+    --sec-vertical-minW: 250px;
+    --sec-vertical-h: 320px;
+    --slider-h: 380px;
+    --slider-minW: 600px;
 }
 
 body
@@ -26,7 +32,7 @@ main
 
 .sec-full
 {
-    /*background-color: rgb(126, 126, 126);*/
+    background-color: rgb(126, 126, 126);
     text-align: center;
     width: 98%;
     margin: auto;
@@ -37,6 +43,7 @@ main
     display: inline-block;
 
     width: 100%;
+    min-width: var(--sec-side-minW);
     min-height: var(--sec-side-minH);
     width: var(--sec-side-w);
     vertical-align: top;
@@ -52,15 +59,15 @@ main
     margin: 5px 0px;
     padding-bottom: 50px;
 
-    min-width: 250px;
-    min-height: 320px;
+    min-width: var(--sec-vetical-minW);
+    min-height: var(--sec-vertical-h);
 
     display: inline-block;
     vertical-align: top;
 }
 .abs-center
 {
-    /*background-color: rgb(240, 240, 240);*/
+    background-color: rgb(240, 240, 240);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,7 +84,7 @@ main
 .content-vertical > .abs-center
 {
     height: 100%;
-    width: 70%;
+    width: 75%;
 }
 .content-horizontal > .abs-center {
     width: 90%;
