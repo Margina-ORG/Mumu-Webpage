@@ -4,10 +4,10 @@
     --sec-side-minH: 400px;
     --sec-side-w: 49%;
 
-    --sec-vertical-minW: 250px;
+    --sec-vertical-minW: 200px;
     --sec-vertical-h: 320px;
     --slider-h: 380px;
-    --slider-minW: 600px;
+    --slider-minW: 700px;
 }
 
 body
@@ -39,7 +39,7 @@ main
 }
 .sec-side
 {
-    background-color: rgb(200, 200, 200);
+    /*background-color: rgb(200, 200, 200);*/
     display: inline-block;
 
     width: 100%;
@@ -54,12 +54,12 @@ main
 }
 .content-vertical
 {
-    background-color: rgb(231, 226, 226);
+    /*background-color: rgb(231, 226, 226);*/
     width: 30%;
     margin: 5px 0px;
     padding-bottom: 50px;
 
-    min-width: var(--sec-vetical-minW);
+    min-width: var(--sec-vertical-minW);
     min-height: var(--sec-vertical-h);
 
     display: inline-block;
@@ -77,14 +77,16 @@ main
 
 .sec-side > .abs-center
 {
-    width: 84%;
+    background-color: rgb(233, 224, 224);
+    width: 90%;
     height: 80%;
 }
 
 .content-vertical > .abs-center
 {
     height: 100%;
-    width: 75%;
+    min-width: var(--sec-vertical-minW);
+    width: 80%;
 }
 .content-horizontal > .abs-center {
     width: 90%;

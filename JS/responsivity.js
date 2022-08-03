@@ -1,5 +1,6 @@
 var secSide = document.getElementsByClassName("sec-side");
 var mainLayout = document.getElementsByTagName("main");
+var slider = document.getElementById("slider");
 
 var minSecSideBySide = 1000;
 var minScreenMain = 600;
@@ -31,9 +32,9 @@ function autoWidth() {
 
     width = getWidth();
 
-    if (width < 1000) {
+    if (width < minSecSideBySide) {
         turnElementsResponsives(secSide, '95%');
-        if(width < 600){
+        if(width < minScreenMain){
             turnElementsResponsives(mainLayout, '100%');
         } else {
             var value = minScreenMain/width*100;
@@ -56,3 +57,27 @@ function turnElementsResponsives(elements, value){
     Array.from(elements).forEach(function turnResponsive(element){element.style.width = value});
 }
 
+function slideContent(id){
+    if (width <= minSecSideBySide) {
+        
+        var value;
+        var sliderWidth = slider.offsetWidth;
+        var mainWidth = mainLayout[0].offsetWidth;
+        switch (id) {
+            case 1:
+                value = (sliderWidth-mainWidth)/2;
+                break;
+            case 2:
+                value = 0;
+                break;
+            case 3:
+                value = (sliderWidth-mainWidth)/2*-1;
+                break;
+        }
+        slide(value+'px');
+    }
+}
+function slide(value){
+    slider.style.marginLeft = value;
+    slider.style.transition = "1s";
+}
