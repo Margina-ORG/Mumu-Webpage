@@ -1,4 +1,9 @@
 var secSide = document.getElementsByClassName("sec-side");
+var mainLayout = document.getElementsByTagName("main");
+
+var minSecSideBySide = 1000;
+var minScreenMain = 600;
+
 function getWidth() {
     return Math.max(
         document.body.scrollWidth,
@@ -26,18 +31,28 @@ function autoWidth() {
 
     width = getWidth();
 
-    if (width < 1160) {
-        for(var index in secSide){
-            turnResponsive(secSide[index], "100%");
+    if (width < 1000) {
+        turnElementsResponsives(secSide, '95%');
+        if(width < 600){
+            turnElementsResponsives(mainLayout, '100%');
+        } else {
+            var value = minScreenMain/width*100;
+            turnElementsResponsives(mainLayout, value+'%');
         }
     } else {
-        for(var index in secSide){
-            turnResponsive(secSide[index], "49%");
-        }
+        turnElementsResponsives(secSide, '49%');
+        turnElementsResponsives(mainLayout, '80%');
     }
 }
 
-function turnResponsive(element, value){
-    element.style.width = value;
+function turnElementResponsive(element, value){
+    if(element){
+        element.style.width = value;
+    } else {
+        console.log("Can't turn a null element into responsive!")
+    }
+}
+function turnElementsResponsives(elements, value){
+    Array.from(elements).forEach(function turnResponsive(element){element.style.width = value});
 }
 

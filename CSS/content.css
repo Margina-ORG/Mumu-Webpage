@@ -7,12 +7,17 @@
     position: absolute;
     width: 26%;
 }
-.content-horizontal > img
+.content-horizontal > .abs-center > img
 {
     /*background-color: aliceblue;*/
+    width: 40%;
     display: inline-block;
     vertical-align: top;
     margin:5px;
+}
+.content-vertical > .abs-center > img
+{
+    width: 70%;
 }
 .video-mask
 {
@@ -21,8 +26,11 @@
 }
 .video, .sec-side > .abs-center > p
 {
-    width: 95%;
-    height: 95%;
+    width: 90%;
+    height: 90%;
+}
+.video
+{
     max-width: 400px;
     max-height: 230px;
 }
@@ -59,8 +67,8 @@ p
 }
 .sec-full > p
 {
-    min-width: 400px;
-    width: 40%;
+    max-width: 500px;
+    width: 80%;
     margin: auto;
     padding: 10px 0px;
 }
