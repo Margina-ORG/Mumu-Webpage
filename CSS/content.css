@@ -1,5 +1,6 @@
 #wraper
 {
+    /*background-color: red;*/
     overflow: hidden;
     height: var(--slider-h);
 }
@@ -12,6 +13,33 @@
 .content-vertical > .abs-center
 {
     background-color: rgba(158, 202, 207, 0.418);
+}
+
+.content-horizontal > .abs-center > div
+{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    min-width: 200px;
+    width: 40%;
+    margin:5px;
+}
+a
+{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+a:hover
+{
+    background-color: yellow;
+    color: black;
+    border: solid black 1px;
+    box-shadow: 1px 1px;
 }
 
 #banner
@@ -40,12 +68,12 @@
     z-index: 1;
     pointer-events: none;
 }
-.video, .sec-side > .abs-center > p
+#video, .sec-side > .abs-center > p
 {
     width: 90%;
     height: 90%;
 }
-.video
+#video
 {
     max-width: 400px;
     max-height: 230px;
@@ -91,18 +119,11 @@ p
 .sec-side > .abs-center > p
 {
     text-align: justify;
-    margin: auto;
+    margin: 25px auto;
+    height:auto;
 }
 .content-vertical > .abs-center > p
 {
     margin: 5px auto;
     width: 75%;
-}
-.content-horizontal > .abs-center > p 
-{
-    display: inline-block;
-    vertical-align: top;
-    min-width: 200px;
-    width: 40%;
-    margin:5px;
 }

@@ -10,7 +10,7 @@
     <script src="JS/responsivity.js" defer></script>
     <title>Mumu's Hill</title>
 </head>
-<body onresize="autoWidth()">
+<body onresize="autoWidth(); autoHeight(); slideContent(2)">
 
     <!--Header-->
     <header>
@@ -20,93 +20,136 @@
     
     
 
-    <!--Demonstração-->
+    <!--    CONTEÚDO DEMONSTRAÇÃO   -->
     <div class="title"><h1>Gameplay</h1></div>
 
     <main id="demo">
-        
+
+
+        <!--  SEÇÃO FULL TEXTO  -->
         <div class="sec-full">
             <h2>O metaverso de Pano</h2>
             <p>Vivendo na periferia, Pano utiliza sua imaginação para transformar o lixo em um universo repleto de bonecos de lã e construções em miniaturas na tetativa de fugir de sua realidade.</p>
         </div>
 
+
+        <!--    SEÇÃO LADO A LADO   -->
         <div class="sec-full">
+
+            <!--    VIDEO   -->
             <div class="sec-side">
                 <div class="abs-center">
                     <!--Teaser-->
-                    <iframe class="video abs-center" src="https://www.youtube.com/embed/2KSFwklvzho?controls=0" title="Teaser Mumu's Hill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe id="video" class="abs-center" src="https://www.youtube.com/embed/2KSFwklvzho?controls=0" title="Teaser Mumu's Hill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
     
+            <!--    TEXTO   -->
             <div class="sec-side">
                 <div class="abs-center">
                     <h2>Vamos jogar?</h2>
-                    <p>Você pode relaxar enquanto gerencia um morro em miniatura ou chamar seus amigos para desafiar gatos, traças e outros bichanos.
-                    <a href="#info"> Jogar </a>
-                    </p>
+                    <p>Você pode relaxar enquanto gerencia um morro em miniatura ou chamar seus amigos para desafiar gatos, traças e outros bichanos.</p>
+                    <a href="#info"> Jogar Agora </a>
                 </div>
             </div>
+
+
+            <!--    FINAL SEÇÃO LADO A LADO-->
         </div>
 
-        <div class="sec-full" id="wraper" onmouseleave="slideContent(2)">
-            <div id="slider" class="abs-center" >
-                <div class="content-vertical" onclick="slideContent(1)">
-                    <div class="abs-center">
-                        <h2>Construa</h2>
-                        <img src="images/body/demo/morro-personalizado.png"
-                            alt="Morro com algumas construções e decorações escolhidas pelo jogador">
-                        <p>Colete recursos para construir casas, lojas ou decorações para o seu morro.</p>
-                    </div>
-                </div>
-            
-                <div class="content-vertical" onclick="slideContent(2)">
-                    <div class="abs-center">
-                        <h2>Negocie</h2>
-                        <img src="images/body/demo/mercado.png" alt="">
-                        <p>Compre e venda personagens, ferramentas e recursos com outros jogadores.</p>
-                    </div>
-                </div>
-            
-                <div class="content-vertical" onclick="slideContent(3)">
-                    <div class="abs-center">
-                        <h2>Sobreviva</h2>
-                        <img src="images/body/demo/equipes.png" alt="">
-                        <p>Construa torres defensivas enquanto luta pela sua vida no modo sobrevivência.</p>
-                    </div>
-                </div>
-            </div> <!--/slider-->
-        </div> <!--/section full vertical-->
-
     </main>
+    <!--    SLIDER PARA COMPLEMENTAR DEMONSTRAÇÃO   -->
+    <div class="sec-full" id="wraper" onmouseleave="slideContent(2)">
+        <!--    Tudo que estiver aqui dentro terá a área de visão limitada pela div wraper-->
 
-    <!--Informação-->
+        <!--    SLIDER  -->
+        <div id="slider" class="abs-center" >
+
+            <!--    CONTEÚDO A    -->
+            <div class="content-vertical" onclick="slideContent(1)">
+                <div class="abs-center">
+                    <h2>Construa</h2>
+                    <img src="images/body/demo/morro-personalizado.png"
+                        alt="Morro com algumas construções e decorações escolhidas pelo jogador">
+                    <p>Colete recursos para construir casas, lojas ou decorações para o seu morro.</p>
+                </div>
+            </div>
+
+            <!--    CONTEÚDO B  -->
+            <div class="content-vertical" onclick="slideContent(2)">
+                <div class="abs-center">
+                    <h2>Negocie</h2>
+                    <img src="images/body/demo/mercado.png" alt="">
+                    <p>Compre e venda personagens, ferramentas e recursos com outros jogadores.</p>
+                </div>
+            </div>
+
+            <!--    CONTEÚDO C  -->
+            <div class="content-vertical" onclick="slideContent(3)">
+                <div class="abs-center">
+                    <h2>Sobreviva</h2>
+                    <img src="images/body/demo/equipes.png" alt="">
+                    <p>Construa torres defensivas enquanto luta pela sua vida no modo sobrevivência.</p>
+                </div>
+            </div>
+
+            <!--    FINAL SLIDER    -->
+        </div>
+
+        <!--    FINAL WRAPER    -->
+    </div> 
+
+
+
+
+    <!--    CONTEÚDO INFORMAÇÃO -->
     <div class="title"><h1>Informações</h1></div>
 
     <main id="info">
+
+        <!--    SEÇÃO FULL TEXTO    -->
         <div class="sec-full">
             <h2>A primeira fase de testes vem ai!</h2>
             <p>Ingresse em nossas comunidades e redes sociais para não perder a oportunidade de jogar e conseguir alguns tokens.
             </p>
         </div>
+
+        <!--    SEÇÃO LADO A LADO   -->
         <div class="sec-full">
+
+            <!--    WHITEPAPER  -->
             <div class="sec-side content-horizontal">
                 <div class="abs-center">
                     <h2>Whitepaper</h2>
                     <img src="images/body/info/whitepaper.png" alt="">
-                    <p>Para saber mais sobre o projeto basta acessar nosso whitepaper.</p>
+                    <div>
+                        <p>Para saber mais sobre o projeto basta acessar nosso whitepaper.</p>
+                        <a href="#">Whitepaper</a>
+                    </div>
                 </div>
             </div>
-    
+
+            <!--    COMUNIDADE   -->
             <div class="sec-side content-horizontal">
                 <div class="abs-center">
                     <h2>Pano nas redes</h2>
                     <img src="images/body/info/Pano.png" alt="Pano criando um amigurumi">
-                    <p>Sigam a Pano e fiquem por dentro de tudo que ela está aprontando.</p>
+                    <div>
+                        <p>Sigam a Pano e fiquem por dentro de tudo que ela está aprontando.</p>
+                        <a target="_blank" href="https://www.instagram.com/mumushill.pano/">Instagram</a>
+                        <a href="#info">Twitter</a>
+                    </div>
                 </div>
             </div>
+
+            <!--    FIM SEÇÃO LADO A LADO-->
         </div>
         
     </main>
+
+
+
+    <!--    RODAPÉ  -->
     <footer class="sec-full">
         <p>Mumu's Hill - Studio Margina - 2021</p>
     </footer>

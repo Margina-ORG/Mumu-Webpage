@@ -1,6 +1,7 @@
 var secSide = document.getElementsByClassName("sec-side");
 var mainLayout = document.getElementsByTagName("main");
 var slider = document.getElementById("slider");
+var video = document.getElementById("video");
 
 var minSecSideBySide = 1000;
 var minScreenMain = 600;
@@ -27,6 +28,13 @@ function getHeight() {
 
 var width = getWidth();
 autoWidth();
+autoHeight();
+
+function autoHeight(){
+    var w = video.offsetWidth;
+    var h = w*0.60;
+    video.style.height = h+'px';
+}
 
 function autoWidth() {
 
@@ -34,12 +42,15 @@ function autoWidth() {
 
     if (width < minSecSideBySide) {
         turnElementsResponsives(secSide, '95%');
+
         if(width < minScreenMain){
             turnElementsResponsives(mainLayout, '100%');
+            turnElementsResponsives(secSide, '100%');
         } else {
             var value = minScreenMain/width*100;
             turnElementsResponsives(mainLayout, value+'%');
         }
+
     } else {
         turnElementsResponsives(secSide, '49%');
         turnElementsResponsives(mainLayout, '80%');
