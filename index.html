@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="CSS/layout.css">
     <link rel="stylesheet" href="CSS/content.css">
     <script src="JS/responsivity.js" defer></script>
+    <script src="JS/slider.js" defer></script>
     <title>Mumu's Hill</title>
 </head>
-<body onresize="autoWidth(); autoHeight(); slideContent(2)">
+<body onresize="autoWidth(); autoHeight(); slide(0)">
 
     <!--Header-->
     <header>
@@ -29,7 +30,7 @@
         <!--  SEÇÃO FULL TEXTO  -->
         <div class="sec-full">
             <h2>O metaverso de Pano</h2>
-            <p>Vivendo na periferia, Pano utiliza sua imaginação para transformar o lixo em um universo repleto de bonecos de lã e construções em miniaturas na tetativa de fugir de sua realidade.</p>
+            <p>Vivendo na periferia, Pano utiliza sua imaginação para transformar o lixo em um universo repleto de bonecos de lã e construções em miniaturas na tentativa de fugir de sua realidade.</p>
         </div>
 
 
@@ -59,7 +60,15 @@
 
     </main>
     <!--    SLIDER PARA COMPLEMENTAR DEMONSTRAÇÃO   -->
-    <div class="sec-full" id="wraper" onmouseleave="slideContent(2)">
+    <div class="sec-full" id="wraper" 
+    onmouseleave="slideContent(2)" 
+    onmousedown="onMouseStart(event)"
+    onmousemove="onMouseMove(event)"
+    onmouseup="onMouseEnd(event)"
+    ontouchstart="onTouchStart(event)"
+    ontouchmove="onTouchMove(event)"
+    ontouchend="onTouchEnd(event)"
+    >
         <!--    Tudo que estiver aqui dentro terá a área de visão limitada pela div wraper-->
 
         <!--    SLIDER  -->

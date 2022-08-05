@@ -6,6 +6,8 @@ var video = document.getElementById("video");
 var minSecSideBySide = 1000;
 var minScreenMain = 600;
 
+
+
 function getWidth() {
     return Math.max(
         document.body.scrollWidth,
@@ -66,29 +68,4 @@ function turnElementResponsive(element, value){
 }
 function turnElementsResponsives(elements, value){
     Array.from(elements).forEach(function turnResponsive(element){element.style.width = value});
-}
-
-function slideContent(id){
-    if (width <= minSecSideBySide) {
-        
-        var value;
-        var sliderWidth = slider.offsetWidth;
-        var mainWidth = mainLayout[0].offsetWidth;
-        switch (id) {
-            case 1:
-                value = (sliderWidth-mainWidth)/2;
-                break;
-            case 2:
-                value = 0;
-                break;
-            case 3:
-                value = (sliderWidth-mainWidth)/2*-1;
-                break;
-        }
-        slide(value+'px');
-    }
-}
-function slide(value){
-    slider.style.marginLeft = value;
-    slider.style.transition = "1s";
 }
