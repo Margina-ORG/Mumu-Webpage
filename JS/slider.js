@@ -1,7 +1,7 @@
 var mainLayout = document.getElementsByTagName("main");
 var slider = document.getElementById("slider");
-var slidePositionA = (slider.offsetWidth-mainLayout[0].offsetWidth)/2;
-var slidePositionC = slidePositionA*-1;
+var slidePositionA;
+var slidePositionC;
 var xStartTouch;
 var xTouch;
 var swipe;
@@ -32,12 +32,17 @@ function slide(value){
 }
 
 function onTouchStart(e){
-    xStartTouch = e.touches[0].clientX;
+    if (width <= minSecSideBySide) {
+        xStartTouch = e.touches[0].clientX;
+    }
 }
 function onTouchMove(e)
 {
     xTouch = e.touches[0].clientX;
-    swipeHorizontal(slider, xStartTouch, xTouch, 0.5);
+
+    if (width <= minSecSideBySide) {
+        swipeHorizontal(slider, xStartTouch, xTouch, 0.5);
+    }
 }
 function onTouchEnd(e){
     findSlide();
@@ -47,6 +52,15 @@ function swipeHorizontal(target, xS, xF, time){
 
     var move = xF-xS;
     var margin = parseInt(window.getComputedStyle(target).marginLeft)+move;
+    var marginLimit = slidePositionA*2.5;
+
+    if(move > 0 && margin > marginLimit){
+        margin = slidePositionA;
+        xStartTouch = xTouch;
+    } else if(move < 0 && margin < marginLimit*-1){
+        margin = slidePositionC;
+        xStartTouch = xTouch;
+    }
 
     target.style.marginLeft = margin+'px';
     target.style.transition = time+'s';
@@ -55,8 +69,8 @@ function swipeHorizontal(target, xS, xF, time){
 function findSlide(){
     
     var direction = (xTouch-xStartTouch)*-1;
-    var long = width*0.33;
-    var short = width*0.05;
+    var long = width*0.50;
+    var short = width*0.10;
     if(direction < -long && swipe == 3){
         swipe = 1;
     } else if(direction < -short && swipe > 1){
@@ -76,4 +90,6 @@ function resetSlide(){
     slide(0);
     xStartTouch = 0;
     xTouch = 0;
+    slidePositionA = (slider.offsetWidth-mainLayout[0].offsetWidth)/2;
+    slidePositionC = slidePositionA*-1;
 }
