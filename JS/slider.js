@@ -52,25 +52,25 @@ function swipeHorizontal(target, xS, xF, time){
 
     var move = xF-xS;
     var margin = parseInt(window.getComputedStyle(target).marginLeft)+move;
-    var marginLimit = slidePositionA*2.5;
+    var marginLimit = slidePositionA*3;
 
     if(move > 0 && margin > marginLimit){
-        margin = slidePositionA;
+        findSlide();
         xStartTouch = xTouch;
     } else if(move < 0 && margin < marginLimit*-1){
-        margin = slidePositionC;
+        findSlide();
         xStartTouch = xTouch;
+    } else {
+        target.style.marginLeft = margin+'px';
+        target.style.transition = time+'s';
     }
-
-    target.style.marginLeft = margin+'px';
-    target.style.transition = time+'s';
 }
 
 function findSlide(){
     
     var direction = (xTouch-xStartTouch)*-1;
-    var long = width*0.50;
-    var short = width*0.10;
+    var long = 200;
+    var short = 30;
     if(direction < -long && swipe == 3){
         swipe = 1;
     } else if(direction < -short && swipe > 1){
