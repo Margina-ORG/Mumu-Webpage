@@ -5,11 +5,13 @@ var slidePositionC;
 var xStartTouch;
 var xTouch;
 var swipe;
+var enableSlider = 650;
+var slideTime = 0.5;
 
 resetSlide();
 
 function slideContent(id){
-    if (width <= minSecSideBySide) {
+    if (width <= enableSlider) {
         swipe = id;
         var value;
         switch (id) {
@@ -28,11 +30,11 @@ function slideContent(id){
 }
 function slide(value){
     slider.style.marginLeft = value;
-    slider.style.transition = "0.5s";
+    slider.style.transition = slideTime+'s';
 }
 
 function onTouchStart(e){
-    if (width <= minSecSideBySide) {
+    if (width <= enableSlider) {
         xStartTouch = e.touches[0].clientX;
     }
 }
@@ -40,8 +42,8 @@ function onTouchMove(e)
 {
     xTouch = e.touches[0].clientX;
 
-    if (width <= minSecSideBySide) {
-        swipeHorizontal(slider, xStartTouch, xTouch, 0.5);
+    if (width <= enableSlider) {
+        swipeHorizontal(slider, xStartTouch, xTouch, slideTime);
     }
 }
 function onTouchEnd(e){

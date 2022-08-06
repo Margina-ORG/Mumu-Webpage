@@ -12,6 +12,17 @@
     --sec-vertical-h: 320px;
     --slider-h: 380px;
     --slider-minW: 700px;
+
+    --color-spray-title: black;
+    --color-spray-paragraph: rgb(24,32,45);
+    --background-varal-a: rgb(171, 207, 171);
+    --background-varal-b: rgb(243, 212, 96);
+    --background-varal-c: rgb(233, 113, 88);
+
+
+    --font-paragraph: 'Sedgwick Ave', cursive;
+    --font-h2: 'Sedgwick Ave Display', cursive;
+    --font-spacing-h2: 5px;
 }
 body
 {
@@ -58,6 +69,7 @@ main
 {
     /*background-color: rgb(231, 226, 226);*/
     width: 30%;
+    height: fit-content;
     margin: 5px 0px;
     padding-bottom: 50px;
 
@@ -86,7 +98,7 @@ main
 }
 .sec-side > .abs-center
 {
-    background-color: rgb(233, 224, 224);
+    background-color: rgb(105, 153, 166);
     width: 90%;
     min-height: 80%;
     height: fit-content;
