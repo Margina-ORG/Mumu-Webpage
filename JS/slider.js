@@ -1,17 +1,20 @@
 var mainLayout = document.getElementsByTagName("main");
 var slider = document.getElementById("slider");
+var slides = document.getElementsByClassName("varal");
+var wraper = document.getElementById("wraper");
 var slidePositionA;
 var slidePositionC;
 var xStartTouch;
 var xTouch;
 var swipe;
-var enableSlider = 650;
+var sliderWidth;
+var enableSlider;
 var slideTime = 0.5;
 
 resetSlide();
 
 function slideContent(id){
-    if (width <= enableSlider) {
+    if (enableSlider) {
         swipe = id;
         var value;
         switch (id) {
@@ -32,9 +35,28 @@ function slide(value){
     slider.style.marginLeft = value;
     slider.style.transition = slideTime+'s';
 }
+function slidePosition(){
+   
+    findSliderWidth();
+    slidePositionA = (sliderWidth-wraper.offsetWidth);
+    slidePositionC = slidePositionA*-1;
+}
+function findSliderWidth(){
+    sliderWidth = 0;
+    Array.from(slides).forEach(function getTotalWidth(element)
+    {
+        var style = window.getComputedStyle(element);
+
+        var w = element.offsetWidth;
+        var mL = parseFloat(style.marginLeft);
+        var mR = parseFloat(style.marginRight);
+        sliderWidth += (w+mL+mR);
+        console.log(sliderWidth);
+    });
+}
 
 function onTouchStart(e){
-    if (width <= enableSlider) {
+    if (enableSlider) {
         xStartTouch = e.touches[0].clientX;
     }
 }
@@ -42,7 +64,7 @@ function onTouchMove(e)
 {
     xTouch = e.touches[0].clientX;
 
-    if (width <= enableSlider) {
+    if (enableSlider) {
         swipeHorizontal(slider, xStartTouch, xTouch, slideTime);
     }
 }
@@ -54,7 +76,7 @@ function swipeHorizontal(target, xS, xF, time){
 
     var move = xF-xS;
     var margin = parseInt(window.getComputedStyle(target).marginLeft)+move;
-    var marginLimit = slidePositionA*3;
+    var marginLimit = slidePositionA*2;
 
     if(move > 0 && margin > marginLimit){
         findSlide();
@@ -90,8 +112,9 @@ function findSlide(){
 function resetSlide(){
     swipe = 2;
     slide(0);
+    slidePosition();
+    enableSlider = slidePositionA-10 > 0;
     xStartTouch = 0;
     xTouch = 0;
-    slidePositionA = (slider.offsetWidth-mainLayout[0].offsetWidth)/2;
-    slidePositionC = slidePositionA*-1;
+
 }

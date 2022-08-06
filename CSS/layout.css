@@ -1,118 +1,167 @@
 @charset "UTF-8";
 
-/**/
+/*div, h2, h1, main, p {
+    border: solid rgba(0, 0, 0, 0.411) 2px;
+}*/
 
-:root{
-    --sec-side-minW: 300px;
-    --sec-side-minH: 400px;
-    --sec-side-w: 49%;
-
-    --sec-vertical-minW: 200px;
-    --sec-vertical-maxW: 250px;
-    --sec-vertical-h: 320px;
-    --slider-h: 380px;
-    --slider-minW: 700px;
-
-    --color-spray-title: black;
-    --color-spray-paragraph: rgb(24,32,45);
-    --background-varal-a: rgb(171, 207, 171);
-    --background-varal-b: rgb(243, 212, 96);
-    --background-varal-c: rgb(233, 113, 88);
-
-
-    --font-paragraph: 'Sedgwick Ave', cursive;
-    --font-h2: 'Sedgwick Ave Display', cursive;
-    --font-spacing-h2: 5px;
-}
-body
-{
-    background-color: antiquewhite;
-    margin: 0px;
-    /*background-image: url("../images/background.png");*/
+main, .sec-full, .sec-side, header{
+    position: relative;
 }
 header
 {
-    position: relative;
     width: 100%;
 }
-main
+body
 {
-    /*background-color: rgb(175, 182, 187);*/
-    max-width: 1250px;
-    width: 80%;
-    margin: auto;
-    padding-top: 20px;
+    margin: 0px;
 }
 
-/**/
+/**************************************************
+*******************   LAYER 0   *******************
+**************************************************/
 
+/*  Configurações da base do layout para que sirvam
+    como referência aos demais contidos nesta.
+ */
+
+main{
+    width: 80%;
+    max-width: 1250px;
+    margin: auto;
+    padding: 2%;
+}
 .sec-full
 {
-    /*background-color: rgb(126, 126, 126);*/
+    margin: 20px auto;
     text-align: center;
-    width: 98%;
-    margin: auto;
+}
+.sec-full-flex
+{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .sec-side
 {
-    /*background-color: rgb(200, 200, 200);*/
-    display: inline-block;
+    min-width: 300px;
+    width: 40%;
+    padding: 20px;
+    margin: 30px auto;
 
-    width: 100%;
-    min-width: var(--sec-side-minW);
-    min-height: var(--sec-side-minH);
-    width: var(--sec-side-w);
-    height: fit-content;
-    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.content-vertical
+
+/**************************************************
+*******************   LAYER 1   *******************
+**************************************************/
+
+.varal
 {
-    /*background-color: rgb(231, 226, 226);*/
-    width: 30%;
-    height: fit-content;
-    margin: 5px 0px;
-    padding-bottom: 50px;
-
-    min-width: var(--sec-vertical-minW);
-    max-width: var(--sec-vertical-maxW);
-    min-height: var(--sec-vertical-h);
-
-    display: inline-block;
-    vertical-align: top;
+    width: 33%;
+    min-width: 180px;
+    max-width: 200px;
+    margin: 0px 2%;
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .abs-center
 {
-    /*background-color: rgb(240, 240, 240);*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
+}
+#wraper
+{
+    overflow: hidden;
+}
+#slider
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1250px;
 }
 
-/**/
+/**************************************************
+*******************   LAYER 2   *******************
+**************************************************/
 
-.sec-full, .sec-side, .content-vertical, header
+/*  Aqui é tratado o layout do conteúdo especificamente*/
+
+#info > .sec-full-flex > .sec-side
 {
-    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
-.sec-side > .abs-center
+
+.sec-side > div
 {
-    background-color: rgb(105, 153, 166);
+    width: 40%;
+    min-width: 200px;
+    margin: auto;
+}
+
+/*  MEDIA  */
+#banner
+{
+    width: 100%;
+}
+#logo
+{
+    width: 26%;
+}
+
+.img-side{
+    vertical-align: top;
+    margin:5px;
+}
+.varal > img
+{
     width: 90%;
-    min-height: 80%;
-    height: fit-content;
 }
-#info > .sec-full > .sec-side > .abs-center{
-    padding-bottom: 20px;
-}
-.content-vertical > .abs-center
+.video
 {
-    height: 100%;
-    min-width: var(--sec-vertical-minW);
+    width: 90%;
+    height: 90%;
+    max-width: 400px;
+    max-height: 230px;
+}
+
+/*  TXTs  */
+.title
+{
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto 20px auto;
+    padding: 40px 60px;
+}
+.sec-side > h2
+{
+    width: 100%;
+}
+.sec-full > p
+{
+    max-width: 500px;
     width: 80%;
+    margin: auto;
+    padding: 10px 0px;
 }
-.content-horizontal > .abs-center {
-    width: 90%;
-
+.sec-side > p, .sec-side > div > p
+{
+    font-family: var(--font-paragraph);
+    color: var(--color-spray-paragraph);
+    text-align: justify;
+    height:auto;
 }

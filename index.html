@@ -35,23 +35,20 @@
 
 
         <!--    SEÇÃO LADO A LADO   -->
-        <div class="sec-full">
+        <div class="sec-full-flex">
 
             <!--    VIDEO   -->
             <div class="sec-side">
-                <div class="abs-center">
-                    <!--Teaser-->
-                    <iframe id="video" class="abs-center" src="https://www.youtube.com/embed/2KSFwklvzho?controls=0" title="Teaser Mumu's Hill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                <!--Teaser-->
+                <iframe class="video" id="video" src="https://www.youtube.com/embed/2KSFwklvzho?controls=0" title="Teaser Mumu's Hill" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
             </div>
     
             <!--    TEXTO   -->
             <div class="sec-side">
-                <div class="abs-center">
-                    <h2>VAMOS JOGAR?</h2>
-                    <p>Você pode relaxar enquanto gerencia um morro em miniatura ou chamar seus amigos para juntos desafiarem gatos, traças e outros bichanos.</p>
-                    <a href="#info"> Jogar Agora</a>
-                </div>
+                <h2>VAMOS JOGAR?</h2>
+                <p>Você pode relaxar enquanto gerencia um morro em miniatura ou chamar seus amigos para juntos desafiarem gatos,traças e outros bichanos.</p>
+                <a href="#info"> Jogar Agora</a>
             </div>
 
 
@@ -59,44 +56,42 @@
         </div>
 
     </main>
+
     <!--    SLIDER PARA COMPLEMENTAR DEMONSTRAÇÃO   -->
-    <div class="sec-full" id="wraper" 
-    onmouseleave="slideContent(2)" 
-    ontouchstart="onTouchStart(event)"
-    ontouchmove="onTouchMove(event)"
+    <div class="sec-full-flex" id="wraper" onmouseleave="slideContent(2)" 
+    ontouchstart="onTouchStart(event)" ontouchmove="onTouchMove(event)"
     ontouchend="onTouchEnd(event)"
     >
         <!--    Tudo que estiver aqui dentro terá a área de visão limitada pela div wraper-->
 
         <!--    SLIDER  -->
-        <div id="slider" class="abs-center" >
+        <div id="slider">
 
             <!--    CONTEÚDO A    -->
-            <div class="content-vertical" id="varal-a" onclick="slideContent(1)">
-                <div class="abs-center">
-                    <h2>Construa</h2>
-                    <img src="images/body/demo/morro-personalizado.png"
-                        alt="Morro com algumas construções e decorações escolhidas pelo jogador">
-                    <p>Colete recursos para construir casas, lojas ou decorações para o seu morro.</p>
-                </div>
+            <div class="varal" id="varal-a" onclick="slideContent(1)">
+                <h2>Construa</h2>
+                <img src="images/body/demo/morro-personalizado.png" alt="Morro">
+                <p>
+                    Colete recursos para construir casas, lojas ou decorações para o seu morro.
+                </p>
             </div>
 
             <!--    CONTEÚDO B  -->
-            <div class="content-vertical" id="varal-b" onclick="slideContent(2)">
-                <div class="abs-center">
-                    <h2>Negocie</h2>
-                    <img src="images/body/demo/mercado.png" alt="">
-                    <p>Compre e venda personagens, ferramentas e recursos com outros jogadores.</p>
-                </div>
+            <div class="varal" id="varal-b" onclick="slideContent(2)">
+                <h2>Negocie</h2>
+                <img src="images/body/demo/mercado.png" alt="">
+                <p>
+                    Compre e venda personagens, ferramentas e recursos com outros jogadores.
+                </p>
             </div>
 
             <!--    CONTEÚDO C  -->
-            <div class="content-vertical" id="varal-c" onclick="slideContent(3)">
-                <div class="abs-center">
-                    <h2>Sobreviva</h2>
-                    <img src="images/body/demo/equipes.png" alt="">
-                    <p>Construa torres defensivas enquanto luta pela sua vida no modo sobrevivência.</p>
-                </div>
+            <div class="varal" id="varal-c" onclick="slideContent(3)">
+                <h2>Sobreviva</h2>
+                <img src="images/body/demo/equipes.png" alt="">
+                <p>
+                    Construa torres defensivas enquanto luta pela sua vida no modo sobrevivência.
+                </p>
             </div>
 
             <!--    FINAL SLIDER    -->
@@ -121,30 +116,26 @@
         </div>
 
         <!--    SEÇÃO LADO A LADO   -->
-        <div class="sec-full">
+        <div class="sec-full-flex">
 
             <!--    WHITEPAPER  -->
-            <div class="sec-side content-horizontal">
-                <div class="abs-center">
-                    <h2>WHITEPAPER</h2>
-                    <img src="images/body/info/whitepaper.png" alt="">
-                    <div>
-                        <p>Entenda desde a gameplay até a economia acessando a documentação.</p>
-                        <a href="#">Whitepaper</a>
-                    </div>
+            <div class="sec-side">
+                <h2>WHITEPAPER</h2>
+                <img class="img-side" src="images/body/info/whitepaper.png" alt="">
+                <div>
+                    <p>Entenda desde a gameplay até a economia acessando a documentação.</p>
+                    <a href="#">Whitepaper</a>
                 </div>
             </div>
 
             <!--    COMUNIDADE   -->
-            <div class="sec-side content-horizontal">
-                <div class="abs-center">
-                    <h2>PANO NAS REDES</h2>
-                    <img src="images/body/info/Pano.png" alt="Pano criando um amigurumi">
-                    <div>
-                        <p>Sigam a Pano e fiquem por dentro de tudo que ela está aprontando.</p>
-                        <a target="_blank" href="https://www.instagram.com/mumushill.pano/">Instagram</a>
-                        <a href="#info">Twitter</a>
-                    </div>
+            <div class="sec-side">
+                <h2>PANO NAS REDES</h2>
+                <img src="images/body/info/Pano.png" alt="Pano criando um amigurumi">
+                <div>
+                    <p>Sigam a Pano e fiquem por dentro de tudo que ela está aprontando.</p>
+                    <a target="_blank" href="https://www.instagram.com/mumushill.pano/">Instagram</a>
+                    <a href="#info">Twitter</a>
                 </div>
             </div>
 

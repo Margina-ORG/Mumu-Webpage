@@ -1,6 +1,5 @@
 var secSide = document.getElementsByClassName("sec-side");
 var mainLayout = document.getElementsByTagName("main");
-var slider = document.getElementById("slider");
 var video = document.getElementById("video");
 
 var minSecSideBySide = 1000;
@@ -46,15 +45,15 @@ function autoWidth() {
         turnElementsResponsives(secSide, '95%');
 
         if(width < minScreenMain){
-            turnElementsResponsives(mainLayout, '100%');
+            turnElementsResponsives(mainLayout, '95%');
             turnElementsResponsives(secSide, '100%');
         } else {
-            var value = minScreenMain/width*100;
+            var value = minScreenMain/width*95;
             turnElementsResponsives(mainLayout, value+'%');
         }
 
     } else {
-        turnElementsResponsives(secSide, '49%');
+        turnElementsResponsives(secSide, '40%');
         turnElementsResponsives(mainLayout, '80%');
     }
 }
