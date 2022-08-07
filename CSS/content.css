@@ -1,17 +1,19 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
 
 :root
 {
     --color-spray-title: black;
     --color-spray-paragraph: rgb(24,32,45);
+    --color-sewing: rgb(99,72,10);
+    --color-sewing-weak: rgb(171, 141, 70);
 
+    --background-section-side: rgb(105, 153, 166);
     --background-varal-a: rgb(171, 207, 171);
     --background-varal-b: rgb(243, 212, 96);
     --background-varal-c: rgb(233, 113, 88);
 
-
+    --font: 'Asap', sans-serif;
     --font-paragraph: 'Sedgwick Ave', cursive;
     --font-h2: 'Sedgwick Ave Display', cursive;
     --font-spacing-h2: 5px;
@@ -21,6 +23,8 @@ body{
 
     /*background-image: url("../images/body/background.png");
     background-repeat: repeat;*/
+    font-family: var(--font);
+    color: var(--color-sewing);
     background-color: antiquewhite;
 }
 
@@ -44,7 +48,10 @@ a:hover
 }
 .sec-side
 {
-    background-color: rgb(105, 153, 166);
+    background-color: var(--background-section-side);
+}
+.varal {
+    color: var(--color-spray-paragraph);
 }
 
 #varal-a
@@ -64,9 +71,10 @@ a:hover
 {
     /*background-image: url("../images/body/bg-h1.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    color: white;*/
+    background-size: 100% 100%;*/
+    color: var(--color-sewing-weak);
 }
+
 .sec-side > h2
 {
     font-family: var(--font-h2);
