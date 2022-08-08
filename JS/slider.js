@@ -1,4 +1,3 @@
-var mainLayout = document.getElementsByTagName("main");
 var slider = document.getElementById("slider");
 var slides = document.getElementsByClassName("varal");
 var wraper = document.getElementById("wraper");

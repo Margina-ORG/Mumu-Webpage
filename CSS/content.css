@@ -38,6 +38,7 @@ a
     padding: 10px;
     text-align: center;
     margin: auto;
+    box-sizing: border-box;
 }
 a:hover
 {
@@ -67,7 +68,7 @@ a:hover
     background-color: var(--background-varal-c);
 }
 
-.title
+h1
 {
     /*background-image: url("../images/body/bg-h1.png");
     background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 var secSide = document.getElementsByClassName("sec-side");
-var mainLayout = document.getElementsByTagName("main");
+var layoutWidth = document.getElementsByClassName("auto-width");
 var video = document.getElementById("video");
 
 var minSecSideBySide = 1000;
@@ -45,16 +45,16 @@ function autoWidth() {
         turnElementsResponsives(secSide, '95%');
 
         if(width < minScreenMain){
-            turnElementsResponsives(mainLayout, '95%');
+            turnElementsResponsives(layoutWidth, '95%');
             turnElementsResponsives(secSide, '100%');
         } else {
             var value = minScreenMain/width*95;
-            turnElementsResponsives(mainLayout, value+'%');
+            turnElementsResponsives(layoutWidth, value+'%');
         }
 
     } else {
         turnElementsResponsives(secSide, '40%');
-        turnElementsResponsives(mainLayout, '80%');
+        turnElementsResponsives(layoutWidth, '80%');
     }
 }
 
