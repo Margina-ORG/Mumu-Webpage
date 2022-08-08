@@ -33,7 +33,7 @@ autoHeight();
 
 function autoHeight(){
     var w = video.offsetWidth;
-    var h = w*0.60;
+    var h = w*0.56;
     video.style.height = h+'px';
 }
 

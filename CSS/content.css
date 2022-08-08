@@ -39,12 +39,12 @@ a
     text-align: center;
     margin: auto;
     box-sizing: border-box;
+    border: solid black 1px;
 }
 a:hover
 {
     background-color: yellow;
     color: black;
-    border: solid black 1px;
     box-shadow: 1px 1px;
 }
 .sec-side
@@ -85,4 +85,13 @@ h1
 p
 {
     font-size: 18px;
+}
+.sec-side > p, .sec-side > div > p
+{
+    font-family: var(--font-paragraph);
+    color: var(--color-spray-paragraph);
+}
+
+footer{
+    background-color: var(--color-sewing-weak);
 }

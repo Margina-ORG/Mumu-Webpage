@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*section, article, header, h1, h2, p, div {
-    border: solid rgba(0, 0, 0, 0.411) 2px;
+    background-color: rgba(128, 128, 128, 0.50);
 }*/
 
 .auto-width, .sec-side, header{
@@ -26,10 +26,19 @@ body
     max-width: 1250px;
     margin: auto;
 }
-article > header, footer
+article > header
 {
     margin: 20px auto;
+    padding-bottom: 20px;
     text-align: center;
+}
+footer{
+    color: white;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    display: flex;
 }
 .sec-full-flex
 {
@@ -42,7 +51,6 @@ article > header, footer
 .sec-side
 {
     min-width: 300px;
-    min-height: 300px;
     width: 40%;
     padding: 20px;
     margin: 30px auto;
@@ -130,10 +138,8 @@ article > header, footer
 }
 .video
 {
-    width: 90%;
+    width: 95%;
     height: 90%;
-    max-width: 400px;
-    max-height: 230px;
 }
 
 /*  TXTs  */
@@ -143,6 +149,10 @@ h1
     width: fit-content;
     margin: 60px auto 20px auto;
     padding: 40px 60px;
+}
+#demo > h1
+{
+    margin-top: 0px;
 }
 .sec-side > h2
 {
@@ -154,10 +164,15 @@ header > p
     margin: auto;
     padding: 10px 0px;
 }
-.sec-side > p, .sec-side > div > p
+.sec-side > p
 {
-    font-family: var(--font-paragraph);
-    color: var(--color-spray-paragraph);
+    max-width: 400px;
+    text-align: justify;
+    height:auto;
+}
+
+.sec-side > div > p
+{
     text-align: justify;
     height:auto;
 }

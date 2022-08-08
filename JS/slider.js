@@ -50,7 +50,6 @@ function findSliderWidth(){
         var mL = parseFloat(style.marginLeft);
         var mR = parseFloat(style.marginRight);
         sliderWidth += (w+mL+mR);
-        console.log(sliderWidth);
     });
 }
 
