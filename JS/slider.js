@@ -8,7 +8,7 @@ var xTouch;
 var swipe;
 var sliderWidth;
 var enableSlider;
-var slideTime = 0.5;
+var slideTime = 0.35;
 
 resetSlide();
 

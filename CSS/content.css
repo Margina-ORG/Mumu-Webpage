@@ -52,28 +52,32 @@ a:hover
     background-color: var(--background-section-side);
 }
 .varal {
-    color: var(--color-spray-paragraph);
+    color: white;
+}
+.varal > p {
+    font-weight: 600;
 }
 
 #varal-a
 {
-    background-color: var(--background-varal-a);
+    /*background-color: var(--background-varal-a);*/
+    background-image: url(../images/body/demo/construa-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 #varal-b
 {
-    background-color: var(--background-varal-b);
+    /*background-color: var(--background-varal-b);*/
+    background-image: url(../images/body/demo/negocie-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 #varal-c
 {
-    background-color: var(--background-varal-c);
-}
-
-h1
-{
-    /*background-image: url("../images/body/bg-h1.png");
+    /*background-color: var(--background-varal-c);*/
+    background-image: url(../images/body/demo/sobreviva-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;*/
-    color: var(--color-sewing-weak);
+    background-size: 100% 100%;
 }
 
 .sec-side > h2
