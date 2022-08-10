@@ -125,7 +125,8 @@ footer{
 }
 #logo
 {
-    width: 26%;
+    width: 20%;
+    display: none;
 }
 
 .img-side{
