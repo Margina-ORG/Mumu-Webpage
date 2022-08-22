@@ -8,12 +8,12 @@
 
 :root
 {
-    --color-spray-title: black;
+    --color-spray-title: rgb(211, 252, 255);
     --color-spray-paragraph: rgb(24,32,45);
     --color-sewing: rgb(99,72,10);
     --color-sewing-weak: rgb(171, 141, 70);
 
-    --background-section-side: rgb(105, 153, 166);
+    --background-section-side: rgb(54, 95, 107);
     --background-varal-a: rgb(171, 207, 171);
     --background-varal-b: rgb(243, 212, 96);
     --background-varal-c: rgb(233, 113, 88);
@@ -59,7 +59,7 @@ a:hover
     background-color: var(--background-section-side);
 }
 .varal {
-    color: black;
+    color: white;
     /*text-shadow: 1px 1px 2px black;*/
 }
 .varal > p {
@@ -68,24 +68,24 @@ a:hover
 
 #varal-a
 {
-    background-color: var(--background-varal-a);
-    /*background-image: url(../images/body/demo/construa-bg.png);
+    /*background-color: var(--background-varal-a);*/
+    background-image: url(../images/body/demo/construa-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;*/
+    background-size: 100% 100%;
 }
 #varal-b
 {
-    background-color: var(--background-varal-b);
-    /*background-image: url(../images/body/demo/negocie-bg.png);
+    /*background-color: var(--background-varal-b);*/
+    background-image: url(../images/body/demo/negocie-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;*/
+    background-size: 100% 100%;
 }
 #varal-c
 {
-    background-color: var(--background-varal-c);
-    /*background-image: url(../images/body/demo/sobreviva-bg.png);
+    /*background-color: var(--background-varal-c);*/
+    background-image: url(../images/body/demo/sobreviva-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;*/
+    background-size: 100% 100%;
 }
 h1
 {
@@ -104,8 +104,20 @@ p
 .sec-side > p, .sec-side > div > p
 {
     font-family: var(--font-paragraph);
-    font-size: 16pt;
+    font-size: 14pt;
     color: var(--color-spray-paragraph);
+}
+.sec-side > p
+{
+    background-image: url(../images/body/bg-spray-a.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sec-side > div
+{
+    background-image: url(../images/body/bg-spray-a.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 footer{
