@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap');
 
 @font-face {
-    font-family: 'Pipa Tales';
-    src: url(../fonts/PipaTales.ttf) format('truetype');
+    font-family: 'Pipa Sans';
+    src: url(../fonts/PipaSans.ttf) format('truetype');
 }
 
 :root
@@ -18,8 +18,8 @@
     --background-varal-b: rgb(243, 212, 96);
     --background-varal-c: rgb(233, 113, 88);
 
-    --font: 'Pipa Tales', 'Asap', sans-serif;
-    --font-size: 18pt;
+    --font: 'Pipa Sans', 'Asap', sans-serif;
+    --font-size: 16pt;
     --font-h1-size: 36pt;
     --font-paragraph: 'Sedgwick Ave', cursive;
     --font-h2: 'Sedgwick Ave Display', cursive;
@@ -59,33 +59,33 @@ a:hover
     background-color: var(--background-section-side);
 }
 .varal {
-    color: white;
-    text-shadow: 1px 1px 2px black;
+    color: black;
+    /*text-shadow: 1px 1px 2px black;*/
 }
 .varal > p {
-    font-weight: 300;
+    /*font-weight: 300;*/
 }
 
 #varal-a
 {
-    /*background-color: var(--background-varal-a);*/
-    background-image: url(../images/body/demo/construa-bg.png);
+    background-color: var(--background-varal-a);
+    /*background-image: url(../images/body/demo/construa-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%;*/
 }
 #varal-b
 {
-    /*background-color: var(--background-varal-b);*/
-    background-image: url(../images/body/demo/negocie-bg.png);
+    background-color: var(--background-varal-b);
+    /*background-image: url(../images/body/demo/negocie-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%;*/
 }
 #varal-c
 {
-    /*background-color: var(--background-varal-c);*/
-    background-image: url(../images/body/demo/sobreviva-bg.png);
+    background-color: var(--background-varal-c);
+    /*background-image: url(../images/body/demo/sobreviva-bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%;*/
 }
 h1
 {
