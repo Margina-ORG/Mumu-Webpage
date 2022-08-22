@@ -8,12 +8,12 @@
 
 :root
 {
-    --color-spray-title: rgb(211, 252, 255);
+    --color-spray-title: rgb(255, 255, 255);
     --color-spray-paragraph: rgb(24,32,45);
     --color-sewing: rgb(99,72,10);
     --color-sewing-weak: rgb(171, 141, 70);
 
-    --background-section-side: rgb(54, 95, 107);
+    --background-section-side: rgb(63, 123, 141);
     --background-varal-a: rgb(171, 207, 171);
     --background-varal-b: rgb(243, 212, 96);
     --background-varal-c: rgb(233, 113, 88);
@@ -56,7 +56,11 @@ a:hover
 }
 .sec-side
 {
-    background-color: var(--background-section-side);
+    /*background-color: var(--background-section-side);*/
+    background-image: url(../images/body/bg-side.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
 }
 .varal {
     color: white;
