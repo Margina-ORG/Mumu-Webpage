@@ -2,7 +2,7 @@ var secSide = document.getElementsByClassName("sec-side");
 var layoutWidth = document.getElementsByClassName("auto-width");
 var video = document.getElementById("video");
 
-var minSecSideBySide = 1050;
+var minSecSideBySide = 1075;
 var minScreenMain = 600;
 
 
@@ -53,7 +53,7 @@ function autoWidth() {
         }
 
     } else {
-        turnElementsResponsives(secSide, '45%');
+        turnElementsResponsives(secSide, '44%');
         turnElementsResponsives(layoutWidth, '100%');
     }
 }

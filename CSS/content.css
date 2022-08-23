@@ -56,11 +56,23 @@ a:hover
 }
 .sec-side
 {
-    background-color: var(--background-section-side);
-    /*background-image: url(../images/body/bg-side.png);
+    /*background-color: var(--background-section-side);*/
+    background-image: url('../images/body/bg-side.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;*/
-    
+    background-size: 100% 100%;
+
+    border: 30px solid black;
+    border-image-source: url('../images/body/palafitas-border.png');
+    border-image-repeat: repeat;
+    border-image-slice: 60;
+    /*box-sizing: border-box;*/
+
+
+}
+#gameplay
+{
+    background-image: url('../images/body/bg-A.png');
+    background-repeat: no-repeat;
 }
 #wraper
 {
@@ -75,7 +87,7 @@ a:hover
 #varal-a
 {
     /*background-color: var(--background-varal-a);*/
-    background-image: url(../images/body/demo/construa-bg.png);
+    background-image: url('../images/body/demo/construa-bg.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color: rgb(19, 74, 23);
@@ -130,11 +142,17 @@ p
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
-.sec-side > div
+.content-side, #content-side-play
 {
     background-image: url(../images/body/bg-spray-a.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+.floating-header
+{
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.521);
+    background-color: var(--background-section-side);
+    border: dashed white 3px;
 }
 
 footer{
