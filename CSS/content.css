@@ -13,7 +13,7 @@
     --color-sewing: rgb(99,72,10);
     --color-sewing-weak: rgb(171, 141, 70);
 
-    --background-section-side: rgb(63, 123, 141);
+    --background-section-side: rgb(89, 128, 139);
     --background-varal-a: rgb(171, 207, 171);
     --background-varal-b: rgb(243, 212, 96);
     --background-varal-c: rgb(233, 113, 88);
@@ -56,26 +56,29 @@ a:hover
 }
 .sec-side
 {
-    /*background-color: var(--background-section-side);*/
-    background-image: url(../images/body/bg-side.png);
+    background-color: var(--background-section-side);
+    /*background-image: url(../images/body/bg-side.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 100%;*/
     
 }
-.varal {
-    color: white;
-    /*text-shadow: 1px 1px 2px black;*/
-}
-.varal > p {
-    /*font-weight: 300;*/
+#wraper
+{
+    background-image: url(../images/body/demo/corda-varal.png);
+    background-repeat: repeat-x;
+    background-position-y: 10%;
 }
 
+.varal > p {
+    font-weight: 600;
+}
 #varal-a
 {
     /*background-color: var(--background-varal-a);*/
     background-image: url(../images/body/demo/construa-bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    color: rgb(19, 74, 23);
 }
 #varal-b
 {
@@ -83,6 +86,7 @@ a:hover
     background-image: url(../images/body/demo/negocie-bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    color: rgb(74, 73, 19);
 }
 #varal-c
 {
@@ -90,7 +94,16 @@ a:hover
     background-image: url(../images/body/demo/sobreviva-bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    color: rgb(74, 29, 19);
 }
+
+.varal > h2
+{
+    color: white;
+    letter-spacing: var(--font-spacing-h2);
+    
+}
+
 h1
 {
     font-size: var(--font-h1-size);
