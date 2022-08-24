@@ -26,7 +26,7 @@ body
     max-width: 1250px;
     margin: auto;
 }
-article > header
+article header
 {
     margin: 20px auto;
     padding-bottom: 20px;
@@ -109,7 +109,7 @@ footer{
 
 /*  Aqui é tratado o layout do conteúdo especificamente*/
 
-#info > .sec-full-flex > .sec-side
+#info .sec-side
 {
     flex-direction: row;
     flex-wrap: wrap;
@@ -144,7 +144,7 @@ footer{
     vertical-align: top;
     /*margin:5px;*/
 }
-.varal > img
+.varal img
 {
     width: 80%;
 }
@@ -162,9 +162,9 @@ h1
     margin: 60px auto 20px auto;
     /*padding: 40px 60px;*/
 }
-#demo > header > h1
+#demo h1
 {
-    /*margin-top: 0px;*/
+    margin-top: 0px;
 }
 
 .floating-header
@@ -183,21 +183,21 @@ h1
     height: 20px;
 }
 
-.varal > h2
+.varal h2
 {
     margin-top: 25%;
 }
-header > p
+header p
 {
     max-width: 800px;
     margin: auto;
     padding: 10px 0px;
 }
-.varal > p {
+.varal p {
     width: 85%;
 }
 
-.sec-side > div > p
+.sec-side p
 {
     text-align: justify;
     height:auto;
