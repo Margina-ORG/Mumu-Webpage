@@ -12,6 +12,7 @@
     --color-spray-paragraph: rgb(24,32,45);
     --color-sewing: rgb(99,72,10);
     --color-sewing-weak: rgb(171, 141, 70);
+    --color-background-itens: rgb(154,128,95);
 
     --background-section-side: rgb(89, 128, 139);
     --background-varal-a: rgb(171, 207, 171);
@@ -71,8 +72,13 @@ a:hover
 }
 #gameplay
 {
-    background-image: url('../images/body/bg-A.png');
+    /*background-image: url('../images/body/bg-A.png');
+    background-repeat: no-repeat;*/
+}
+.mask{
+    background-image: url('../images/body/fita-border.png');
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 #wraper
 {
@@ -112,8 +118,10 @@ a:hover
 .varal > h2
 {
     color: white;
+    background-color: rgba(0, 0, 0, 0.3);
     letter-spacing: var(--font-spacing-h2);
-    
+    width: 104%;
+    padding: 18px 0px;
 }
 
 h1
@@ -156,5 +164,10 @@ p
 }
 
 footer{
-    background-color: var(--color-sewing-weak);
+    background-image: url('../images/body/bg-B.png');
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+footer > div{
+    background-color: var(--color-background-itens);
 }

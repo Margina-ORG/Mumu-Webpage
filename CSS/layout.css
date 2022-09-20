@@ -35,9 +35,8 @@ article header
 footer{
     color: white;
     margin: auto;
-    justify-content: center;
-    align-items: center;
     min-height: 200px;
+    padding-top: 86px;
     display: flex;
 }
 .sec-full-flex
@@ -84,7 +83,7 @@ footer{
     align-items: center;
     text-align: center;
 }
-.abs-center
+.abs-center, .mask
 {
     position: absolute;
     top: 50%;
@@ -101,6 +100,12 @@ footer{
     justify-content: center;
     width: 100%;
     max-width: 1250px;
+}
+footer div{
+    display: inherit;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 /**************************************************
@@ -140,9 +145,22 @@ footer{
     display: none;
 }
 
-.img-side{
+.img-side
+{
     vertical-align: top;
-    /*margin:5px;*/
+    position: relative;
+}
+.mask
+{
+    pointer-events: none;
+    z-index: 1;
+    width: 97%;
+    height: 95%;
+}
+.img-side .mask
+{
+    width: 110%;
+    height: 110%;
 }
 .varal img
 {
@@ -173,8 +191,9 @@ h1
     width: 50%;
     top: -10%;
     left: 50%;
-    transform: translate(-50%,-50%) rotate(10deg);
+    transform: translate(-50%,-50%) rotate(7deg);
     padding: 5%;
+    z-index: 2;
 
 }
 .floating-support
